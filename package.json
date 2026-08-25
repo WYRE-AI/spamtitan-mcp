@@ -1,5 +1,5 @@
 {
-  "name": "@wyre-technology/spamtitan-mcp",
+  "name": "@wyre-ai/spamtitan-mcp",
   "version": "1.1.2",
   "description": "MCP server for SpamTitan email security — manage quarantine, allowlists, blocklists, and view email stats",
   "type": "module",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wyre-technology/spamtitan-mcp.git"
+    "url": "git+https://github.com/WYRE-AI/spamtitan-mcp.git"
   },
   "keywords": [
     "mcp",
@@ -38,9 +38,9 @@
   "author": "Wyre Technology",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/wyre-technology/spamtitan-mcp/issues"
+    "url": "https://github.com/WYRE-AI/spamtitan-mcp/issues"
   },
-  "homepage": "https://github.com/wyre-technology/spamtitan-mcp#readme",
+  "homepage": "https://github.com/WYRE-AI/spamtitan-mcp#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0"
   },
