@@ -7,12 +7,12 @@ A Model Context Protocol (MCP) server for SpamTitan email security. Enables AI a
 
 This is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server that connects Claude (or any MCP-compatible AI) to your SpamTitan environment.
 
-> **Part of the [MSP Claude Plugins](https://github.com/wyre-technology) ecosystem** — a growing suite of AI integrations for the MSP stack. Built by MSPs, for MSPs.
+> **Part of the [MSP Claude Plugins](https://github.com/WYRE-AI) ecosystem** — a growing suite of AI integrations for the MSP stack. Built by MSPs, for MSPs.
 
 ## Installation
 
 ```bash
-npm install @wyre-technology/spamtitan-mcp
+npm install @wyre-ai/spamtitan-mcp
 ```
 
 ## Configuration
@@ -36,7 +36,7 @@ Add to your Claude Desktop `claude_desktop_config.json`:
   "mcpServers": {
     "spamtitan-mcp": {
       "command": "npx",
-      "args": ["@wyre-technology/spamtitan-mcp"],
+      "args": ["@wyre-ai/spamtitan-mcp"],
       "env": {
         "SPAMTITAN_API_KEY": "your-spamtitan-api-key"
       }
@@ -50,7 +50,7 @@ Add to your Claude Desktop `claude_desktop_config.json`:
 ```bash
 claude mcp add spamtitan-mcp \
   -e SPAMTITAN_API_KEY=your-value \
-  -- npx -y @wyre-technology/spamtitan-mcp
+  -- npx -y @wyre-ai/spamtitan-mcp
 ```
 
 ### Docker
@@ -81,7 +81,7 @@ Email filtering statistics and reports
 
 ```bash
 # Clone the repository
-git clone https://github.com/wyre-technology/spamtitan-mcp.git
+git clone https://github.com/WYRE-AI/spamtitan-mcp.git
 cd spamtitan-mcp
 
 # Install dependencies

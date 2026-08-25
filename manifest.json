@@ -5,9 +5,9 @@
   "version": "0.0.0",
   "description": "MCP server for SpamTitan email security — manage quarantine, allowlists, blocklists, and view email stats",
   "long_description": "Provides AI assistants with structured access to SpamTitan email security. Manage the email quarantine queue (release or delete messages), maintain allowlists and blocklists, and view email flow statistics through the Model Context Protocol.",
-  "author": { "name": "Wyre Technology", "url": "https://github.com/wyre-technology" },
-  "repository": { "type": "git", "url": "https://github.com/wyre-technology/spamtitan-mcp" },
-  "homepage": "https://github.com/wyre-technology/spamtitan-mcp",
+  "author": { "name": "Wyre Technology", "url": "https://github.com/WYRE-AI" },
+  "repository": { "type": "git", "url": "https://github.com/WYRE-AI/spamtitan-mcp" },
+  "homepage": "https://github.com/WYRE-AI/spamtitan-mcp",
   "license": "Apache-2.0",
   "keywords": ["spamtitan", "email", "security", "spam", "quarantine", "msp"],
   "server": {

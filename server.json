@@ -1,18 +1,18 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.wyre-technology/spamtitan-mcp",
+  "name": "io.github.WYRE-AI/spamtitan-mcp",
   "title": "SpamTitan",
   "description": "MCP server for SpamTitan email security — quarantine, allow/block lists, and policy management.",
   "repository": {
-    "url": "https://github.com/wyre-technology/spamtitan-mcp",
+    "url": "https://github.com/WYRE-AI/spamtitan-mcp",
     "source": "github"
   },
   "version": "0.0.0",
-  "websiteUrl": "https://github.com/wyre-technology/spamtitan-mcp",
+  "websiteUrl": "https://github.com/WYRE-AI/spamtitan-mcp",
   "packages": [
     {
       "registryType": "oci",
-      "identifier": "ghcr.io/wyre-technology/spamtitan-mcp:0.0.0",
+      "identifier": "ghcr.io/wyre-ai/spamtitan-mcp:0.0.0",
       "transport": {
         "type": "stdio"
       },
