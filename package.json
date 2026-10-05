@@ -1,7 +1,7 @@
 {
   "name": "@wyre-ai/spamtitan-mcp",
   "version": "1.1.2",
-  "description": "MCP server for SpamTitan email security — manage quarantine, allowlists, blocklists, and view email stats",
+  "description": "MCP server for SpamTitan email security \u2014 manage quarantine, allowlists, blocklists, and view email stats",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,7 +19,9 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint src",
-    "build:ui": "vite build && node scripts/embed-ui.mjs"
+    "build:ui": "vite build && node scripts/embed-ui.mjs",
+    "pack:mcpb": "node scripts/pack-mcpb.js",
+    "validate:mcpb": "mcpb validate manifest.json"
   },
   "repository": {
     "type": "git",
