@@ -4,6 +4,7 @@ logs/
 *.log
 .env
 .env.*
+!.env.example
 *.mcpb
 coverage/
 .DS_Store

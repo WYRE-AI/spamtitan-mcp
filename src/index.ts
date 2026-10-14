@@ -26,7 +26,16 @@ async function main() {
 
   if (transportType === 'http') {
     const { startHttpServer } = await import('./http.js');
-    startHttpServer();
+    const httpServer = await startHttpServer();
+    const shutdown = async () => {
+      logger.info('Shutting down SpamTitan MCP server...');
+      await new Promise<void>((resolve, reject) => {
+        httpServer.close((err) => (err ? reject(err) : resolve()));
+      });
+      process.exit(0);
+    };
+    process.on('SIGINT', shutdown);
+    process.on('SIGTERM', shutdown);
     return;
   }
 
