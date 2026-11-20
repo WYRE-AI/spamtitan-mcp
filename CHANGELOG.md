@@ -23,6 +23,12 @@
 
 ### Fixed
 
+- **The HTTP transport no longer exits on a malformed request (WYREAI-741).** The request
+  target was parsed against the client-supplied `Host` header, and a value that does not parse
+  (or a target such as `//`) threw inside the request listener before authentication. The
+  target is now parsed against a fixed base, so `Host` is no longer consulted, and a target
+  that still cannot be parsed gets a `400` JSON response while the server keeps running.
+
 * **client:** Self-hosted instance URLs no longer lose their path prefix. `apiRequest()` built request URLs with `new URL(path, base)`, which performs RFC 3986 relative resolution rather than concatenation: because every call site passes a path-absolute reference (e.g. `/api/v1/stats`), the base URL's own path was discarded entirely. `SPAMTITAN_BASE_URL` is documented as "your SpamTitan instance URL" and SpamTitan is self-hosted, so any appliance served under a path prefix (e.g. `https://mail.example.com/spamtitan/`) had every request land on `/api/v1/...` instead of `/spamtitan/api/v1/...`. The bare-origin TitanHQ default is unaffected, which is why this was invisible by default. Base and path are now slash-normalized and joined explicitly. This also removes a sharper edge of the same bug: a path beginning with `//` is a *protocol-relative* reference, so `new URL('//api/v1/x', base)` resolved to the host `api` — sending the request to an entirely different server. Regression tests in `src/__tests__/client-url.test.ts` pin both host shapes.
 
 * **health:** `/health` (and new `/healthz`) now return a shallow unauthenticated `200 {"status":"ok"}` and no longer depend on `getCredentials()`. In gateway mode credentials arrive per-request via headers, so the previous credential check returned `503`, failing the Azure liveness probe every 30s and crash-looping the `gwp-spamtitan` container.
